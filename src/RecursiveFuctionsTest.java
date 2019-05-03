@@ -34,4 +34,28 @@ public class RecursiveFuctionsTest {
 		assertTrue("the method don't work",  RecursiveFuctions.arraySummatory(arr, 7) == 36);
 		
 	}
+	
+	@Test
+	public void testPalindrome(){
+		assertTrue("the method don't work" , RecursiveFuctions.palindrome("ana", "ana".length()-1));
+		assertTrue("the method don't work" , !RecursiveFuctions.palindrome("casa", "casa".length()-1));
+		assertTrue("the method don't work" , RecursiveFuctions.palindrome("anitalavalatina", "anitalavalatina".length()-1));
+		
+	}
+	
+	@Test
+	public void testFlipString(){
+		assertTrue("the method don't work" , RecursiveFuctions.flipString("saque 5.0", "saque 5.0".length()-1).equals("0.5 euqas") );
+		assertTrue("the method don't work" , RecursiveFuctions.flipString("Hola Mundo", "odnuM aloH".length()-1).equals("odnuM aloH"));
+		assertTrue("the method don't work" , RecursiveFuctions.flipString("juliana", "anailuj".length()-1).equals("anailuj"));
+		
+	}
+	
+	@Test
+	public void testMixString(){
+		assertTrue("the method don't work" , RecursiveFuctions.mixString("ABCD", "EFGH", "ABCD".length()-1).equals("AEBFCGDH"));
+		assertTrue("the method don't work" , RecursiveFuctions.mixString("hola", "mund" , "hola".length()-1).equals("hmoulnad"));
+		assertTrue("the method don't work" , RecursiveFuctions.mixString("fg", "hj", "fg".length()-1).equals("fhgj"));
+		
+	}
 }
